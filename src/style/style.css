@@ -96,13 +96,6 @@ nav.sticky {
 
 }
 
-@media screen and (max-width: 991px) {
-    nav #navbarNav ul {
-        display: flex;
-        align-items: center;
-    }
-}
-
 /* section banner */
 section {
     background: var(--background);
@@ -458,9 +451,10 @@ section:nth-of-type(9) {
                 border: 1px solid var(--border-color-input);
                 height: auto;
                 width: 100%;
-                padding: 0.50rem;
+                padding: 0.80rem;
                 font-size: 9pt;
                 color: var(--color-text-commit);
+                margin-bottom: 1rem;
 
 
                 &::placeholder {
@@ -493,7 +487,7 @@ section:nth-of-type(9) {
                 width: 200px;
                 border: none;
                 outline: none;
-                padding: 0.50rem;
+                padding: 0.80rem;
                 text-transform: uppercase;
                 border-radius: 5px;
                 background: var(--background);
@@ -531,7 +525,7 @@ footer a {
 }
 
 #btn-whatsapp {
-    right: 50px;
+    right: 0px;
     bottom: 20px;
     height: 5rem;
     width: 5rem;
@@ -620,6 +614,18 @@ footer a {
     border: none;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background: var(--background-primary);
+}
+
+::-webkit-scrollbar-button {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--background);
+}
 
 /* responsivo  */
 @media screen and (max-width: 991px) {
@@ -701,17 +707,20 @@ footer a {
 
     section:nth-of-type(5) {
         .container .row {
-    
+
             .description-about {
-    
+                padding: 0rem 0.50rem;
+
                 .title {
+                    margin-top: 2rem;
                     text-align: center;
                 }
-    
+
                 button {
                     width: 100%;
+                    margin-bottom: 2rem;
                 }
-    
+
             }
         }
     }
@@ -719,10 +728,10 @@ footer a {
     section:nth-of-type(7) {
 
         .container {
-  
+
             .user {
                 margin-bottom: 2rem;
-    
+
                 .user-border {
                     border: 1px solid var(--color-border-primary);
                     background: var(--background-primary);
@@ -731,8 +740,8 @@ footer a {
                     border-radius: 50%;
                     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.13);
                     padding: 0.20rem;
-    
-    
+
+
                     img {
                         height: auto;
                         width: 100%;
@@ -740,17 +749,17 @@ footer a {
                 }
             }
 
-    
+
         }
-    
-       
+
+
     }
 
     section:nth-of-type(9) {
 
         .container {
             background: var(--background-primary);
-    
+
             .row {
                 .checkout-contact {
                     height: auto;
@@ -759,31 +768,31 @@ footer a {
                     align-items: center;
                     gap: 1rem;
                     margin-bottom: 1rem;
-    
-    
-    
+
+
+
                     img {
                         height: 30px;
                         width: 30px;
                     }
-    
+
                     span {
                         font-size: 12pt;
                         font-weight: 400;
                         color: var(--color-text);
                     }
                 }
-    
-    
+
+
                 input {
                     margin-bottom: 1rem;
-    
+
                     &::placeholder {
                         font-size: 9pt;
                         color: var(--color-text-commit);
                     }
                 }
-    
+
                 textarea {
                     outline: none;
                     border-radius: 5px;
@@ -794,33 +803,39 @@ footer a {
                     padding: 0.50rem;
                     font-size: 9pt;
                     color: var(--color-text-commit);
-    
+
                     &::placeholder {
                         font-size: 9pt;
                         color: var(--color-text-commit);
                     }
-    
+
                 }
-    
+
                 button {
 
                     width: 100%;
-    
+
                 }
-    
+
             }
-    
+
             .mapa {
                 height: 500px;
                 width: 100%;
-    
+
             }
-    
-    
+
+
         }
-    
+
         background: var(--background-primary);
     }
 
+}
 
+@media screen and (max-width: 991px) {
+    nav #navbarNav ul {
+        display: flex;
+        align-items: center;
+    }
 }
