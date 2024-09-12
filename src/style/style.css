@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --background: #050A30;
+    --background-primary: #fff;
+    --text-color-primary: #FAFAFA;
+    --color-dourad: #CF9B33;
+    --color-border-primary: #E2E2E2;
+    --color-text: #050A30;
+    --color-text-commit: #505050;
+    --background-input: #F1F1F1;
+    --border-color-input: #DFDFDF;
+    --color-green: #40C351;
+}
+
+/* Config page  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", system-ui;
+}
+
+html {
+    height: 100vh;
+    width: 100%;
+    background: var(--background);
+}
+
+/* Navbar  */
+nav {
+    background: var(--background);
+    transition: all .3s ease;
+
+    .container {
+        #btn-toogle {
+            border: none;
+            outline: none;
+            box-shadow: none;
+            padding: 0.30rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+
+            i {
+                font-size: 25pt;
+                color: var(--text-color-primary);
+            }
+        }
+
+        .navbar-brand .navbar-logo {
+            height: 80px;
+            width: 100%;
+
+            transition: all 0.3s ease;
+        }
+
+        #navbarNav ul li a {
+            font-size: 12pt;
+            font-weight: 400;
+            color: var(--text-color-primary);
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: var(--color-dourad);
+            }
+        }
+    }
+
+    #navbarNav ul {
+        background: var(--background);
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+}
+
+nav.sticky {
+    height: 70px;
+    box-shadow: 1px 1px 10px var(--background);
+    background: var(--background);
+
+    .navbar-brand .navbar-logo {
+        height: 50px;
+    }
+
+    #navbarNav ul li a {
+        font-size: 10pt;
+    }
+
+
+
+}
+
+@media screen and (max-width: 991px) {
+    nav #navbarNav ul {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* section banner */
+section {
+    background: var(--background);
+
+    .container {
+
+        .banner-description {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            p {
+                color: var(--text-color-primary);
+            }
+
+            .welcome {
+                font-size: 15pt;
+            }
+
+            .title {
+                margin-top: 0.50rem;
+                font-weight: 500;
+                line-height: 60px;
+                font-size: 40pt;
+            }
+
+            .description {
+                margin-top: 0.50rem;
+                font-size: 15pt;
+                line-height: 30px;
+            }
+
+            button {
+                margin-top: 0.50rem;
+                height: auto;
+                width: 200px;
+                padding: 0.70rem;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                background: var(--color-dourad);
+                color: var(--text-color-primary);
+                text-transform: uppercase;
+                font-weight: 500;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background: #d69920;
+                }
+
+            }
+        }
+
+        background: var(--background);
+
+        .img-container {
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                height: 500px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+/* section areas de atuação */
+section:nth-of-type(3) {
+
+    .container {
+        background: var(--background-primary);
+
+        .selection-title {
+            color: var(--color-text);
+        }
+
+        .selection-description {
+            font-size: 12pt;
+            font-weight: 400;
+        }
+
+        .card-service {
+            height: auto;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid var(--color-border-primary);
+            background: var(--background-primary);
+            box-shadow: 1px 1px 10px rgba(78, 78, 78, 0.068);
+            transition: all 0.3s ease-in;
+            position: relative;
+
+
+            &:hover {
+                background: var(--background);
+                cursor: pointer;
+                transform: translateY(-10px);
+
+                .card-service-title {
+                    color: var(--background-primary);
+                }
+
+                .card-service-description {
+                    color: var(--background-primary);
+
+                }
+            }
+
+            .card-service-icone {
+                img {
+                    height: 50px;
+                    width: auto;
+                    margin-top: 1rem;
+                }
+            }
+
+            .card-service-title {
+                margin-top: 1rem;
+                font-size: 12pt;
+                font-weight: 500;
+            }
+
+            .card-service-description {
+                height: auto;
+                width: 100%;
+                font-size: 11pt;
+                text-align: left;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            button {
+
+                span {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    font-size: 12pt;
+                    color: var(--color-dourad);
+                }
+
+                outline: none;
+                border: none;
+                background: transparent;
+            }
+        }
+    }
+
+    height: auto;
+    width: 100%;
+    background: var(--background-primary);
+
+
+}
+
+/* section sobre nos  */
+section:nth-of-type(5) {
+    .container .row {
+        .img-banner-about {
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+
+        .description-about {
+            height: auto;
+            width: 100%;
+            padding: 3rem 0rem;
+
+            .title {
+                color: var(--text-color-primary);
+            }
+
+            .about {
+                margin-top: 2rem;
+                margin-bottom: 2rem;
+                font-size: 12pt;
+                line-height: 30px;
+
+                p {
+                    text-align: justify;
+                }
+            }
+
+
+            button {
+                height: auto;
+                width: 200px;
+                background: var(--color-dourad);
+                padding: 0.60rem;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                color: var(--text-color-primary);
+
+                &:hover {
+                    background: #d69920;
+                }
+            }
+
+        }
+    }
+}
+
+/* selection comentarios  */
+section:nth-of-type(7) {
+
+    .container {
+
+        background: var(--background-primary);
+
+        .selection-title {
+            color: var(--color-text);
+        }
+
+        .selection-description {
+            font-size: 12pt;
+            font-weight: 400;
+        }
+
+        .card-commit {
+            height: auto;
+            width: 100%;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid var(--color-border-primary);
+            background: var(--background-primary);
+            box-shadow: 1px 1px 10px rgba(78, 78, 78, 0.068);
+            transition: all 0.3s ease-in;
+
+            &:hover {
+                cursor: pointer;
+                transform: translateY(-10px);
+            }
+
+            .card-commit-text {
+                font-weight: 400;
+                font-size: 11pt;
+                color: var(--color-text-commit);
+            }
+
+            .card-commit-validate {
+                height: auto;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0.50rem;
+
+                img {
+                    height: 30px;
+                    width: auto;
+                }
+            }
+
+            .card-commit-title {
+                color: var(--color-text-commit);
+                font-weight: 500;
+                font-size: 12pt;
+                margin-top: 1rem;
+            }
+        }
+
+        .user {
+            height: auto;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: flex-start;
+
+            .user-border {
+                border: 1px solid var(--color-border-primary);
+                background: var(--background-primary);
+                height: 70px;
+                width: 70px;
+                border-radius: 50%;
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.13);
+                padding: 0.20rem;
+
+
+                img {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+
+        .user-description {
+            height: auto;
+            width: 100%;
+            font-size: 11pt;
+            line-height: 10px;
+            color: var(--color-text-commit);
+
+            p:nth-of-type(1) {
+                margin-top: 0.80rem;
+                font-size: 13pt;
+                font-weight: 600;
+            }
+
+            p:nth-of-type(2) {
+                font-weight: 400;
+            }
+        }
+
+    }
+
+    background: var(--background-primary);
+}
+
+/* selection contato  */
+section:nth-of-type(9) {
+
+    .container {
+        background: var(--background-primary);
+
+        .row {
+            .checkout-contact {
+                height: auto;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1rem;
+
+
+
+                img {
+                    height: 30px;
+                    width: 30px;
+                }
+
+                span {
+                    font-size: 12pt;
+                    font-weight: 400;
+                    color: var(--color-text);
+                }
+            }
+
+
+            input {
+                outline: none;
+                border-radius: 5px;
+                background: var(--background-input);
+                border: 1px solid var(--border-color-input);
+                height: auto;
+                width: 100%;
+                padding: 0.50rem;
+                font-size: 9pt;
+                color: var(--color-text-commit);
+
+
+                &::placeholder {
+                    font-size: 9pt;
+                    color: var(--color-text-commit);
+                }
+            }
+
+            textarea {
+                outline: none;
+                border-radius: 5px;
+                background: var(--background-input);
+                border: 1px solid var(--border-color-input);
+                height: 100px;
+                width: 100%;
+                padding: 0.50rem;
+                font-size: 9pt;
+                color: var(--color-text-commit);
+
+                &::placeholder {
+                    font-size: 9pt;
+                    color: var(--color-text-commit);
+                }
+
+            }
+
+            button {
+                margin-top: 1rem;
+                height: auto;
+                width: 200px;
+                border: none;
+                outline: none;
+                padding: 0.50rem;
+                text-transform: uppercase;
+                border-radius: 5px;
+                background: var(--background);
+
+                span {
+                    color: var(--background-primary);
+                    font-size: 11pt;
+                    font-weight: 500;
+                }
+
+            }
+
+        }
+
+        .mapa {
+            height: 500px;
+            width: 100%;
+
+        }
+
+
+    }
+
+    background: var(--background-primary);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: var(--color-dourad);
+    }
+}
+
+#btn-whatsapp {
+    right: 50px;
+    bottom: 20px;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+
+    span {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background: var(--color-green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 1px 1px 10px var(--background-primary);
+        }
+
+        i {
+            font-size: 25pt;
+            color: var(--background-primary);
+        }
+    }
+
+
+    /* for all social containers*/
+    .socialContainer {
+        width: 52px;
+        height: 52px;
+        background-color: var(--color-green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition-duration: 0.3s;
+        border-radius: 30px;
+    }
+
+    /* Whatsapp*/
+    .containerFour:hover {
+        background-color: #128c7e;
+        transition-duration: 0.3s;
+        transform: scale(1.2);
+    }
+
+    .socialContainer:active {
+        transform: scale(0.9);
+        transition-duration: 0.3s;
+    }
+
+    .socialSvg {
+        width: 17px;
+    }
+
+    .socialSvg path {
+        fill: rgb(255, 255, 255);
+    }
+
+    .socialContainer:hover .socialSvg {
+        animation: slide-in-top 0.3s both;
+    }
+
+    @keyframes slide-in-top {
+        0% {
+            transform: translateY(-50px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+
+}
+
+#btn-contact-whatsapp {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
+/* responsivo  */
+@media screen and (max-width: 991px) {
+    section {
+
+        .container {
+
+            .banner-description {
+                margin-top: 2rem;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+
+                p {
+                    text-align: center;
+                    color: var(--text-color-primary);
+                }
+
+                .welcome {
+                    font-size: 12pt;
+                }
+
+                .title {
+                    font-size: 30pt;
+                }
+
+                .description {
+                    text-align: center;
+                    font-size: 13pt;
+                }
+
+                .button-banner {
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+
+            }
+
+
+            .img-container {
+                height: auto;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    height: 500px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    section:nth-of-type(3) {
+
+        .container {
+
+            .selection-description {
+                text-align: justify;
+            }
+
+            .card-service {
+
+                margin-bottom: 2rem;
+
+
+            }
+
+
+        }
+    }
+
+    section:nth-of-type(5) {
+        .container .row {
+    
+            .description-about {
+    
+                .title {
+                    text-align: center;
+                }
+    
+                button {
+                    width: 100%;
+                }
+    
+            }
+        }
+    }
+
+    section:nth-of-type(7) {
+
+        .container {
+  
+            .user {
+                margin-bottom: 2rem;
+    
+                .user-border {
+                    border: 1px solid var(--color-border-primary);
+                    background: var(--background-primary);
+                    height: 70px;
+                    width: 70px;
+                    border-radius: 50%;
+                    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.13);
+                    padding: 0.20rem;
+    
+    
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+
+    
+        }
+    
+       
+    }
+
+    section:nth-of-type(9) {
+
+        .container {
+            background: var(--background-primary);
+    
+            .row {
+                .checkout-contact {
+                    height: auto;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                    margin-bottom: 1rem;
+    
+    
+    
+                    img {
+                        height: 30px;
+                        width: 30px;
+                    }
+    
+                    span {
+                        font-size: 12pt;
+                        font-weight: 400;
+                        color: var(--color-text);
+                    }
+                }
+    
+    
+                input {
+                    margin-bottom: 1rem;
+    
+                    &::placeholder {
+                        font-size: 9pt;
+                        color: var(--color-text-commit);
+                    }
+                }
+    
+                textarea {
+                    outline: none;
+                    border-radius: 5px;
+                    background: var(--background-input);
+                    border: 1px solid var(--border-color-input);
+                    height: 100px;
+                    width: 100%;
+                    padding: 0.50rem;
+                    font-size: 9pt;
+                    color: var(--color-text-commit);
+    
+                    &::placeholder {
+                        font-size: 9pt;
+                        color: var(--color-text-commit);
+                    }
+    
+                }
+    
+                button {
+
+                    width: 100%;
+    
+                }
+    
+            }
+    
+            .mapa {
+                height: 500px;
+                width: 100%;
+    
+            }
+    
+    
+        }
+    
+        background: var(--background-primary);
+    }
+
+
+}
